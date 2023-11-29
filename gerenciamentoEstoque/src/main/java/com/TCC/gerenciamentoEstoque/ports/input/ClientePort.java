@@ -1,14 +1,21 @@
 package com.TCC.gerenciamentoEstoque.ports.input;
 
+import com.TCC.gerenciamentoEstoque.domain.infrastructure.dto.ClienteDto;
 import com.TCC.gerenciamentoEstoque.domain.model.Cliente;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ClientePort {
 
-    List<Cliente> getAllClientes();
+    List<ClienteDto> getAllClientes();
 
-    List<Cliente> getClienteByCnpjCpf(String cnpjCpf);
+    ClienteDto getClienteByCnpjCpf(String cnpjCpf);
 
-    Cliente createCliente(Cliente cliente);
+    Cliente createCliente(ClienteDto clienteDto);
+
+    Optional<Cliente> updateClienteById(Long id, ClienteDto clienteDto);
+
+
+    Optional<Cliente> deleteClienteById(Long id);
 }

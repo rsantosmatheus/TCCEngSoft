@@ -10,7 +10,7 @@ import lombok.Setter;
 public class ProdutoDto {
     private Long id;
     private String nome;
-    private Fornecedor fornecedor;
+    private FornecedorDto fornecedor;
     private double valorCompra;
     private double valorVenda;
     private int quantidadeMinima;

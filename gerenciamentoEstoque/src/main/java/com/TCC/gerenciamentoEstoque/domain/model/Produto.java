@@ -33,7 +33,4 @@ public class Produto {
     @Column
     private int quantidadeMinima;
 
-    @ManyToOne
-    @JoinColumn(name = "venda_id")
-    private Venda venda;
 }

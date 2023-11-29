@@ -9,6 +9,6 @@ import lombok.Setter;
 public class EstoqueDto {
 
     private Long id;
-    private Produto produto;
+    private ProdutoDto produto;
     private int quantidade;
 }
