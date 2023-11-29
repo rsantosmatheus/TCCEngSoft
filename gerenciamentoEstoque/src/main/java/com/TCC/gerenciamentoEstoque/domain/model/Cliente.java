@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cliente {
+public class Cliente{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +21,7 @@ public class Cliente {
     private String razaoSocial;
 
     @Column
-    private String cnpj;
+    private String cnpjOuCpf;
 
     @Column
     private String telefone;
