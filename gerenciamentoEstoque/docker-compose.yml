@@ -1,15 +1,18 @@
 version: '3.8'
 
 services:
-  meu-banco-de-dados:
-    image: postgres
-    container_name: TCC_PostgreSQL_DB
+  postgres:
+    image: postgres:latest
+    container_name: postgres-container
     environment:
-      POSTGRES_PASSWORD: senha
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
     ports:
       - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
 
-volumes:
-  postgres_data:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8082:8082
