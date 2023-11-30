@@ -27,11 +27,13 @@ public class ClienteUseCase implements ClientePort {
 
 
     @Override
-    public List<ClienteDto> getAllClientes() {
+    public List<ClienteDto> getAllClientes() throws CustomException{
 
         List<ClienteDto>clienteDtos = new ArrayList<>();
-
         clienteRepository.findAll().forEach(cliente -> clienteDtos.add(clienteMapper.clienteDtoMapper(cliente)));
+        if(clienteDtos.size()<1){
+            throw new CustomException("Não encontrado", ResponseEntity.status(400).body("Não Encontrado"));
+        }
         return clienteDtos;
     }
 

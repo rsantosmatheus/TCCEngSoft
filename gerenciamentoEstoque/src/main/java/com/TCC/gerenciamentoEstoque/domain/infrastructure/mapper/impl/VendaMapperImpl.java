@@ -29,12 +29,9 @@ public class VendaMapperImpl implements VendaMapper {
     @Override
     public Venda vendaMapper(VendaDto vendaDto) {
         Venda venda = new Venda();
-        List<Produto> produtos = new ArrayList<>();
-
-        vendaDto.getProdutos().forEach(produtoDto -> produtos.add(produtoMapper.produtoMapper(produtoDto)));
 
         venda.setId(vendaDto.getId());
-        venda.setProdutos(produtos);
+        venda.setProduto(produtoMapper.produtoMapper(vendaDto.getProduto()));
         venda.setCliente(clienteMapper.clienteMapper(vendaDto.getCliente()));
         venda.setFuncionario(funcionarioMapper.funcionarioMapper(vendaDto.getFuncionario()));
         venda.setData(vendaDto.getData());
@@ -45,12 +42,9 @@ public class VendaMapperImpl implements VendaMapper {
     @Override
     public VendaDto vendaDtoMapper(Venda venda) {
         VendaDto vendaDto = new VendaDto();
-        List<ProdutoDto> produtoDtos = new ArrayList<>();
-
-        venda.getProdutos().forEach(produto -> produtoDtos.add(produtoMapper.produtoDtoMapper(produto)));
 
         vendaDto.setId(venda.getId());
-        vendaDto.setProdutos(produtoDtos);
+        vendaDto.setProduto(produtoMapper.produtoDtoMapper(venda.getProduto()));
         vendaDto.setCliente(clienteMapper.clienteDtoMapper(venda.getCliente()));
         vendaDto.setFuncionario(funcionarioMapper.funcionarioDtoMapper(venda.getFuncionario()));
         vendaDto.setData(venda.getData());

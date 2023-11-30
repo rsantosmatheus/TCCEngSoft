@@ -20,6 +20,7 @@ public class ProdutoMapperImpl implements ProdutoMapper {
         produto.setId(produtoDto.getId());
         produto.setNome(produtoDto.getNome());
         produto.setValorVenda(produtoDto.getValorVenda());
+        produto.setCodInterno(produtoDto.getCodInterno());
         produto.setValorCompra(produtoDto.getValorCompra());
         produto.setQuantidadeMinima(produtoDto.getQuantidadeMinima());
         produto.setFornecedor(fornecedorMapper.fornecedorMapper(produtoDto.getFornecedor()));
@@ -33,6 +34,7 @@ public class ProdutoMapperImpl implements ProdutoMapper {
 
         produtoDto.setId(produto.getId());
         produtoDto.setNome(produto.getNome());
+        produtoDto.setCodInterno(produto.getCodInterno());
         produtoDto.setValorVenda(produto.getValorVenda());
         produtoDto.setValorCompra(produto.getValorCompra());
         produtoDto.setQuantidadeMinima(produto.getQuantidadeMinima());

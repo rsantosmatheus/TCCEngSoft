@@ -30,6 +30,10 @@ public class FornecedorUseCase implements FornecedorPort {
 
         List<FornecedorDto> fornecedorDtos = new ArrayList<>();
         fornecedorRepository.findAll().forEach(fornecedor -> fornecedorDtos.add(fornecedorMapper.fornecedorDtoMapper(fornecedor)));
+        if(fornecedorDtos.size()<1){
+            throw new CustomException("Não encontrado", ResponseEntity.status(400).body("Não Encontrado"));
+        }
+
         return fornecedorDtos;
     }
 

@@ -11,8 +11,9 @@ import java.util.List;
 public class VendaDto {
 
     private Long id;
-    private List<ProdutoDto> produtos;
+    private ProdutoDto produto;
     private Date data;
+    private int quantidade;
     private FuncionarioDto funcionario;
     private ClienteDto cliente;
 

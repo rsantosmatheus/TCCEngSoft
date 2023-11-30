@@ -31,7 +31,9 @@ public class FuncionarioUseCase implements FuncionarioPort{
 
         List<FuncionarioDto> funcionarioDtos = new ArrayList<>();
         funcionarioRepository.findAll().forEach(funcionario -> funcionarioDtos.add(funcionarioMapper.funcionarioDtoMapper(funcionario)));
-
+        if(funcionarioDtos.size()<1){
+            throw new CustomException("Não encontrado", ResponseEntity.status(400).body("Não Encontrado"));
+        }
         return funcionarioDtos;
     }
 

@@ -20,6 +20,9 @@ public class Produto {
     @Column
     private String nome;
 
+    @Column
+    private int codInterno;
+
     @ManyToOne
     @JoinColumn(name = "fornecedor_id")
     private Fornecedor fornecedor;

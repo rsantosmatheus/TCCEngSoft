@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 import java.util.Date;
-import java.util.List;
 
 
 @Getter
@@ -21,15 +21,15 @@ public class Venda {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToMany
-    @JoinTable(
-            name = "venda_produto",
-            joinColumns = @JoinColumn(name =  "venda_id"),
-            inverseJoinColumns = @JoinColumn(name = "produto_id"))
-    private List<Produto> produtos;
+    @ManyToOne
+    @JoinColumn(name = "produto_id")
+    private Produto produto;
 
     @Column
     private Date data;
+
+    @Column
+    private int quantidade;
 
     @ManyToOne
     @JoinColumn(name = "funcionario_id")
