@@ -33,12 +33,12 @@ public class FuncionarioController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Optional<Funcionario>> updateFuncionarioById(@PathVariable Long id, @RequestBody FuncionarioDto funcionarioDto){
+    public ResponseEntity<Funcionario> updateFuncionarioById(@PathVariable Long id, @RequestBody FuncionarioDto funcionarioDto){
         return ResponseEntity.ok(funcionarioPort.updateFuncionario(id, funcionarioDto));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Optional<Funcionario>> deleteFuncionarioById(@PathVariable Long id){
+    public ResponseEntity<Funcionario> deleteFuncionarioById(@PathVariable Long id){
         return ResponseEntity.ok(funcionarioPort.deleteFuncionarioById(id));
     }
 }

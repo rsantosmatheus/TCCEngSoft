@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
-    @Query(nativeQuery= true, value="SELECT * FROM cliente WHERE cnpjCpf = ? LIMIT 1")
+    @Query(nativeQuery= true, value="SELECT * FROM cliente WHERE CNPJ_OU_CPF  = ? LIMIT 1")
     Cliente findClienteByCnpjCpf(String cnpjCpf);
 
 

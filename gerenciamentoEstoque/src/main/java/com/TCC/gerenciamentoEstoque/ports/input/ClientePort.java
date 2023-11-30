@@ -4,7 +4,6 @@ import com.TCC.gerenciamentoEstoque.domain.infrastructure.dto.ClienteDto;
 import com.TCC.gerenciamentoEstoque.domain.model.Cliente;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ClientePort {
 
@@ -14,8 +13,7 @@ public interface ClientePort {
 
     Cliente createCliente(ClienteDto clienteDto);
 
-    Optional<Cliente> updateClienteById(Long id, ClienteDto clienteDto);
+    Cliente updateClienteById(Long id, ClienteDto clienteDto);
 
-
-    Optional<Cliente> deleteClienteById(Long id);
+    Cliente deleteClienteById(Long id);
 }

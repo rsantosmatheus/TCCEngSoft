@@ -14,7 +14,7 @@ public interface FuncionarioPort {
 
     Funcionario createFuncionario(FuncionarioDto funcionarioDto);
 
-    Optional<Funcionario> updateFuncionario(Long id, FuncionarioDto funcionarioDto);
+    Funcionario updateFuncionario(Long id, FuncionarioDto funcionarioDto);
 
-    Optional<Funcionario> deleteFuncionarioById(Long id);
+    Funcionario deleteFuncionarioById(Long id);
 }

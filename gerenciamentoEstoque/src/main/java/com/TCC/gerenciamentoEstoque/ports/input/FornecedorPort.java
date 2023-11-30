@@ -15,7 +15,7 @@ public interface FornecedorPort {
 
     Fornecedor createFornecedor(FornecedorDto fornecedorDto);
 
-    Optional<Fornecedor> updateFornecedorById(Long id, FornecedorDto fornecedorDto);
+    Fornecedor updateFornecedorById(Long id, FornecedorDto fornecedorDto);
 
-    Optional<Fornecedor> deleteFornecedorById(Long id);
+    Fornecedor deleteFornecedorById(Long id);
 }

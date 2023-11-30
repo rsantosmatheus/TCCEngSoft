@@ -21,8 +21,11 @@ public class Venda {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "venda_id")
+    @ManyToMany
+    @JoinTable(
+            name = "venda_produto",
+            joinColumns = @JoinColumn(name =  "venda_id"),
+            inverseJoinColumns = @JoinColumn(name = "produto_id"))
     private List<Produto> produtos;
 
     @Column

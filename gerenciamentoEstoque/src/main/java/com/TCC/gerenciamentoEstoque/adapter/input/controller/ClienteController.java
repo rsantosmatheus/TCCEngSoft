@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/cliente")
@@ -28,17 +27,17 @@ public class ClienteController {
     }
 
     @PostMapping
-    public ResponseEntity<Cliente> createCliente(@RequestBody ClienteDto clienteDto){
+    public ResponseEntity<?> createCliente(@RequestBody ClienteDto clienteDto){
         return ResponseEntity.ok(clientePort.createCliente(clienteDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Optional<Cliente>> updateClienteById(@PathVariable Long id, @RequestBody ClienteDto clienteDto){
+    public ResponseEntity<Cliente> updateClienteById(@PathVariable Long id, @RequestBody ClienteDto clienteDto){
         return ResponseEntity.ok(clientePort.updateClienteById(id, clienteDto));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Optional<Cliente>> deleteClienteById(@PathVariable Long id){
+    public ResponseEntity<Cliente> deleteClienteById(@PathVariable Long id){
         return ResponseEntity.ok(clientePort.deleteClienteById(id));
     }
 }

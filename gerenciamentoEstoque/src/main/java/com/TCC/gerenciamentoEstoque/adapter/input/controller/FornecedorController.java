@@ -34,12 +34,12 @@ public class FornecedorController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Optional<Fornecedor>> updateFornecedorById(@PathVariable Long id, @RequestBody FornecedorDto fornecedorDto){
+    public ResponseEntity<Fornecedor> updateFornecedorById(@PathVariable Long id, @RequestBody FornecedorDto fornecedorDto){
         return ResponseEntity.ok(fornecedorPort.updateFornecedorById(id, fornecedorDto));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Optional<Fornecedor>> deleteFornecedorById(@PathVariable Long id){
+    public ResponseEntity<Fornecedor> deleteFornecedorById(@PathVariable Long id){
         return ResponseEntity.ok(fornecedorPort.deleteFornecedorById(id));
     }
 }
