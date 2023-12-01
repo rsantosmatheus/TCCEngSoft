@@ -1,0 +1,717 @@
+{
+	"info": {
+		"_postman_id": "72d19031-d6ee-449d-bf32-3252f7e59274",
+		"name": "GerenciamentoEstoque",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "CadastrarCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"razaoSocial\": \"Arlindo LTDA\",\r\n  \"cnpjOuCpf\": \"545569965964\",\r\n  \"telefone\": \"44 3030303030\",\r\n  \"endereço\": \"Rua das Arvores 68\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosClientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarClientePorCpfCnpj",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/545569965964",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"545569965964"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"razaoSocial\": \"Arlindo e família LTD\",\r\n  \"cnpjOuCpf\": \"5455695462264\",\r\n  \"telefone\": \"44 3030303030\",\r\n  \"endereço\": \"Rua das Arvores 68\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estoque",
+			"item": []
+		},
+		{
+			"name": "Fornecedor",
+			"item": [
+				{
+					"name": "CadastrarFornecedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"razaoSocial\": \"Empresa XPTO LDTA\",\r\n  \"cnpj\": \"12345678901234\",\r\n  \"telefone\": \"(12) 3456-7890\",\r\n  \"endereço\": \"Avenida Brasil, 131\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarFornecedor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"razaoSocial\": \"XPTO Company LDTA\",\r\n  \"cnpj\": \"4818416518749\",\r\n  \"telefone\": \"(12) 3456-7890\",\r\n  \"endereço\": \"Avenida Brasil, 131\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fornecedor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosFornecedores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fornecedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosFornecedorPorCnpj",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fornecedor/4818416518749",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedor",
+								"4818416518749"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarFuncionario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fornecedor/4818416518749",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fornecedor",
+								"4818416518749"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionario",
+			"item": [
+				{
+					"name": "CadastrarFuncionario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Luiz\",\r\n  \"cpf\": \"985355112598\",\r\n  \"telefone\": \"4454654-1654\",\r\n  \"endereco\": \"Rua das Araras, 235\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/funcionario/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosFuncionarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/funcionario/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosFuncionariosCpf Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/funcionario/98532512598",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"98532512598"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarFuncionario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Anderson\",\r\n  \"cpf\": \"98532512598\",\r\n  \"telefone\": \"445482-1654\",\r\n  \"endereco\": \"Rua das Luzes, 23\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/funcionario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarFuncionarioPorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/funcionario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "CadastrarPedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"produto\": {\r\n    \"nome\": \"Produto de Exemplo\",\r\n    \"codInterno\": 123,\r\n    \"fornecedor\": {\r\n      \"nome\": \"Fornecedor de Exemplo\",\r\n      \"cnpj\": \"12345678901234\",\r\n      \"telefone\": \"(12) 3456-7890\",\r\n      \"endereço\": \"Rua do Fornecedor, 456\"\r\n    },\r\n    \"valorCompra\": 50.0,\r\n    \"valorVenda\": 100.0,\r\n    \"quantidadeMinima\": 10\r\n  },\r\n  \"quantidade\": 5,\r\n  \"data\": \"2023-01-01\", // Substitua pela data desejada\r\n  \"funcionario\": {\r\n    \"nome\": \"Nome do Funcionário\",\r\n    \"cpf\": \"123.456.789-01\",\r\n    \"telefone\": \"(12) 3456-7890\",\r\n    \"endereço\": \"Rua do Funcionário, 789\"\r\n  },\r\n  \"fornecedor\": {\r\n    \"nome\": \"Outro Fornecedor\",\r\n    \"cnpj\": \"56789012345678\",\r\n    \"telefone\": \"(12) 3456-7890\",\r\n    \"endereço\": \"Rua do Outro Fornecedor, 789\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarPedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"produto\": {\r\n    \"nome\": \"Produto de XPTO\",\r\n    \"codInterno\": 123,\r\n    \"fornecedor\": {\r\n      \"nome\": \"Fornecedor de Exemplo\",\r\n      \"cnpj\": \"12345678901234\",\r\n      \"telefone\": \"(12) 3456-7890\",\r\n      \"endereço\": \"Rua do Fornecedor, 456\"\r\n    },\r\n    \"valorCompra\": 50.0,\r\n    \"valorVenda\": 100.0,\r\n    \"quantidadeMinima\": 10\r\n  },\r\n  \"quantidade\": 5,\r\n  \"data\": \"2023-01-01\",\r\n  \"funcionario\": {\r\n    \"nome\": \"Nome do Funcionário\",\r\n    \"cpf\": \"123.456.789-01\",\r\n    \"telefone\": \"(12) 3456-7890\",\r\n    \"endereço\": \"Rua do Funcionário, 789\"\r\n  },\r\n  \"fornecedor\": {\r\n    \"nome\": \"Outro Fornecedor\",\r\n    \"cnpj\": \"56789012345678\",\r\n    \"telefone\": \"(12) 3456-7890\",\r\n    \"endereço\": \"Rua do Outro Fornecedor, 789\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosPedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPedidoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPedidosPorProduto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/produto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPedidosPorFuncionario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/funcionario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarPedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "CadastrarProduto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Produto de Exemplo\",\r\n  \"codInterno\": 123,\r\n  \"fornecedor\": {\r\n    \"razaoSocial\": \"Empresa XPTO LDTA\",\r\n    \"cnpj\": \"12345678901234\",\r\n    \"telefone\": \"(12) 3456-7890\",\r\n    \"endereço\": \"Avenida Brasil, 131\"\r\n  },\r\n  \"valorCompra\": 50.0,\r\n  \"valorVenda\": 100.0,\r\n  \"quantidadeMinima\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarProduto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Produto\",\r\n  \"codInterno\": 123,\r\n  \"fornecedor\": {\r\n    \"razaoSocial\": \"Empresa XPTO LDTA\",\r\n    \"cnpj\": \"12345678901234\",\r\n    \"telefone\": \"(12) 3456-7890\",\r\n    \"endereço\": \"Avenida Brasil, 131\"\r\n  },\r\n  \"valorCompra\": 50.0,\r\n  \"valorVenda\": 100.0,\r\n  \"quantidadeMinima\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosProdutos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarProdutoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarProdutoPorCodInterno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarProduto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Venda",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
