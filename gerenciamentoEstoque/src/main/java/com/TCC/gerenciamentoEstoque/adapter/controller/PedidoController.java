@@ -56,5 +56,4 @@ public class PedidoController {
     public ResponseEntity<Pedido> deletePedidoById(@PathVariable Long id){
         return ResponseEntity.ok(pedidoPort.deletePedidoById(id));
     }
-
 }

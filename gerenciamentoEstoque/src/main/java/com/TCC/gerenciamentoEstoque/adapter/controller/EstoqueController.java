@@ -42,6 +42,4 @@ public class EstoqueController {
     public ResponseEntity<String> getValorPotencialEstoque(){
         return ResponseEntity.ok(estoquePort.getValorPotecialEstoque());
     }
-
-    /*Estoque é alterado através de pedidos e vendas, por isso não há métodos para manipulá-lo*/
 }

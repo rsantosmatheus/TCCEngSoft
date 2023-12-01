@@ -50,5 +50,4 @@ public class ProdutoController {
     public  ResponseEntity<Produto> deleteProdutoById(@PathVariable Long id){
         return ResponseEntity.ok(produtoPort.deleteProdutoById(id));
     }
-
 }

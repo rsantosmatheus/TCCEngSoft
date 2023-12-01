@@ -55,5 +55,4 @@ public class VendaController {
     public ResponseEntity<Venda>deleteVenda(@PathVariable Long id){
         return ResponseEntity.ok(vendaPort.deleteVenda(id));
     }
-
 }
