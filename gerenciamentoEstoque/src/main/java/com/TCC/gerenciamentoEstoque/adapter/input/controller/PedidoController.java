@@ -22,17 +22,17 @@ public class PedidoController {
         return ResponseEntity.ok(pedidoPort.getAllPedidos());
     }
 
-    @GetMapping("/{idProduto}")
+    @GetMapping("/produto/{idProduto}")
     public ResponseEntity<List<PedidoDto>> getAllPedidosByIdProduto(@PathVariable Long idProduto){
         return ResponseEntity.ok(pedidoPort.getAllPedidosByIdProduto(idProduto));
     }
 
-    @GetMapping("/{idFornecedor}")
+    @GetMapping("/fornecedor/{idFornecedor}")
     public ResponseEntity<List<PedidoDto>> getAllPedidosByIdFornecedor(@PathVariable Long idFornecedor){
         return ResponseEntity.ok(pedidoPort.getAllPedidosByIdFornecedor(idFornecedor));
     }
 
-    @GetMapping("/{idFuncionario}")
+    @GetMapping("/funcionario/{idFuncionario}")
     public ResponseEntity<List<PedidoDto>> getAllPedidosByIdFuncionario(@PathVariable Long idFuncionario){
         return ResponseEntity.ok(pedidoPort.getAllPedidosByIdFuncionario(idFuncionario));
     }
