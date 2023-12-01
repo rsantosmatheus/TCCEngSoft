@@ -1,4 +1,4 @@
-package com.TCC.gerenciamentoEstoque.adapter.input.controller;
+package com.TCC.gerenciamentoEstoque.adapter.controller;
 
 import com.TCC.gerenciamentoEstoque.domain.infrastructure.dto.ProdutoDto;
 import com.TCC.gerenciamentoEstoque.domain.model.Produto;
